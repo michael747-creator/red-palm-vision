@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Phone, Clock, Star, MapPin, Leaf, Award, Truck, ShieldCheck, ArrowRight } from "lucide-react";
+import { Phone, Clock, Star, MapPin, Leaf, Award, Truck, ShieldCheck, ArrowRight, MessageCircle } from "lucide-react";
 import heroPalm from "@/assets/hero-palm.jpg";
 import productPour from "@/assets/product-pour.jpg";
 import plantation from "@/assets/plantation.jpg";
@@ -20,7 +20,27 @@ function Index() {
       <Reviews />
       <Contact />
       <Footer />
+      <WhatsAppButton />
     </div>
+  );
+}
+
+function WhatsAppButton() {
+  const phone = "2349159651347";
+  const message = encodeURIComponent(
+    "Hello Crown Palm Oil! I'm interested in your red palm oil and would like more information."
+  );
+  return (
+    <a
+      href={`https://wa.me/${phone}?text=${message}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with us on WhatsApp"
+      className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3.5 font-medium text-white shadow-elevated transition hover:scale-105 hover:bg-[#1ebe5d]"
+    >
+      <MessageCircle className="h-5 w-5 fill-white" />
+      <span className="hidden sm:inline">Chat on WhatsApp</span>
+    </a>
   );
 }
 
