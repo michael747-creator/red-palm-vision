@@ -20,9 +20,6 @@ export default defineConfig({
     // Render can trigger redirect/rewrites loops if asset URLs are not stable.
     // Keep paths rooted at "/".
     base: '/',
-    build: {
-      outDir: 'dist',
-    },
   },
 
 });
