@@ -13,10 +13,13 @@ export default defineConfig({
     server: { entry: "server" },
   },
   vite: {
-    base: '/', // Ensure the base path is set to the root
+    // Render can trigger redirect/rewrites loops if asset URLs are not stable.
+    // Keep paths rooted at "/".
+    base: '/',
     build: {
-      outDir: 'dist', // Ensure the output directory is 'dist'
+      outDir: 'dist',
     },
   },
+
 });
 
