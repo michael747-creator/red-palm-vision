@@ -12,4 +12,11 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
   },
+  vite: {
+    base: '/', // Ensure the base path is set to the root
+    build: {
+      outDir: 'dist', // Ensure the output directory is 'dist'
+    },
+  },
 });
+

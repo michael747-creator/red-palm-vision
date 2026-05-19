@@ -80,8 +80,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Crown Palm Oil LTD — Premium Red Palm Oil Manufacturer" },
       { name: "twitter:description", content: "Crown Palm Oil LTD produces premium, naturally-pressed red palm oil. Trusted food manufacturer rated 5.0 on Google." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/731acfad-b0da-4c5e-a111-e398933d31d4/id-preview-0e78a56b--beddfa11-4880-4959-b269-6c6423670741.lovable.app-1779097460762.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/731acfad-b0da-4c5e-a111-e398933d31d4/id-preview-0e78a56b--beddfa11-4880-4959-b269-6c6423670741.lovable.app-1779097460762.png" },
+      { property: "og:image", content: "/photo_2026-05-18_17-21-58.jpg" },
+      { name: "twitter:image", content: "/photo_2026-05-18_17-21-58.jpg" },
+      { rel: "icon", href: "/favicon.jpg" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

@@ -3,6 +3,7 @@ import { Phone, Clock, Star, MapPin, Leaf, Award, Truck, ShieldCheck, ArrowRight
 import heroPalm from "@/assets/hero-palm.jpg";
 import productPour from "@/assets/product-pour.jpg";
 import plantation from "@/assets/plantation.jpg";
+import headerLogo from "@/assets/photo_2026-05-18_17-21-58.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -20,7 +21,36 @@ function Index() {
       <Reviews />
       <Contact />
       <Footer />
+      <WhatsAppFloating />
     </div>
+  );
+}
+
+function WhatsAppFloating() {
+  const phoneE164 = "09159651347";
+  const message = encodeURIComponent("Hi Crowns Palm Oil, I would like to order red palm oil.");
+  const href = `https://wa.me/${phoneE164}?text=${message}`;
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Chat on WhatsApp"
+      title="Make orders via WhatsApp"
+      className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_10px_25px_rgba(0,0,0,0.25)] transition hover:opacity-90 sm:bottom-6 sm:right-6 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#25D366] hover:scale-105 animate-bounce"
+    >
+      <svg
+        viewBox="0 0 32 32"
+        role="img"
+        aria-hidden="true"
+        fill="currentColor"
+        className="h-7 w-7 sm:h-7 sm:w-7"
+      >
+        <path d="M19.02 18.29c-.53-.26-2.08-1.02-2.4-1.13-.32-.11-.55-.26-.78.26-.23.53-.9 1.13-1.1 1.36-.2.23-.4.26-.93 0-1.52-.76-2.52-1.42-3.31-2.93-.29-.55.29-.5.82-.77.26-.13.53-.61.69-1.02.17-.41.08-.78-.03-.93-.11-.15-.53-1.26-.73-1.72-.2-.46-.4-.38-.55-.39-.15-.01-.32-.01-.49-.01-.17 0-.46.06-.7.28-.24.22-.93.91-.93 2.22s.95 2.57 1.08 2.75c.13.18 1.86 2.84 4.51 3.98.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.08 2.08-.85 2.38-1.67.3-.82.3-1.52.21-1.67-.09-.15-.32-.23-.85-.49z" />
+        <path d="M16 3C9.93 3 5 7.7 5 13.47c0 2.3.76 4.43 2.06 6.12L6.5 28l8.82-1.56c.2.06.4.1.68.16C22.06 25.08 27 20.38 27 14.7 27 7.7 21.07 3 16 3zm0 22.1c-.46 0-.9-.05-1.33-.16l-.52-.14-4.99.88 1.01-4.63-.34-.48a9.87 9.87 0 0 1-1.86-5.79C8.97 9 12.17 5.95 16 5.95c3.83 0 7.03 3.05 7.03 7.22S19.83 25.1 16 25.1z" />
+      </svg>
+    </a>
   );
 }
 
@@ -29,10 +59,12 @@ function Header() {
     <header className="absolute top-0 left-0 right-0 z-50">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         <a href="#" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gold-gradient text-primary-foreground font-bold">
-            C
-          </div>
-          <span className="font-serif text-lg font-semibold tracking-tight">Crown Palm Oil</span>
+          <img
+            src={headerLogo}
+            alt="Crowns Palm Oil logo"
+            className="h-9 w-9 rounded-full object-cover"
+          />
+          <span className="font-serif text-lg font-semibold tracking-tight">Crowns Palm Oil</span>
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
           <a href="#about" className="hover:text-foreground transition">About</a>
@@ -103,6 +135,13 @@ function Hero() {
           </div>
         </div>
       </div>
+      <div className="absolute bottom-10 right-10">
+        <img
+          src="/photo_2026-05-18_17-22-11.jpg"
+          alt="Additional palm oil product"
+          className="h-32 w-32 rounded-full object-cover shadow-lg"
+        />
+      </div>
     </section>
   );
 }
@@ -148,7 +187,7 @@ function About() {
             From our groves to your kitchen — nothing in between.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground">
-            Crown Palm Oil LTD has been crafting some of the finest red palm oil in the region.
+            Crowns Palm Oil LTD has been crafting some of the finest red palm oil in the region.
             We work directly with smallholder farmers, mill our fruit within hours of harvest,
             and bottle without additives or chemical refining.
           </p>
@@ -348,3 +387,4 @@ function Footer() {
     </footer>
   );
 }
+
