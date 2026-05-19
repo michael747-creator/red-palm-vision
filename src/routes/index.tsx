@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Phone, Clock, Star, MapPin, Leaf, Award, Truck, ShieldCheck, ArrowRight } from "lucide-react";
+import { Phone, Clock, Star, MapPin, Leaf, Award, Truck, ShieldCheck, ArrowRight, MessageCircle } from "lucide-react";
 import heroPalm from "@/assets/hero-palm.jpg";
 import productPour from "@/assets/product-pour.jpg";
 import plantation from "@/assets/plantation.jpg";
@@ -21,11 +21,16 @@ function Index() {
       <Reviews />
       <Contact />
       <Footer />
+<<<<<<< HEAD
       <WhatsAppFloating />
+=======
+      <WhatsAppButton />
+>>>>>>> d702e2755741900e578020e5d1f3859f5c3a81d3
     </div>
   );
 }
 
+<<<<<<< HEAD
 function WhatsAppFloating() {
   const phoneE164 = "09159651347";
   const message = encodeURIComponent("Hi Crowns Palm Oil, I would like to order red palm oil.");
@@ -50,6 +55,23 @@ function WhatsAppFloating() {
         <path d="M19.02 18.29c-.53-.26-2.08-1.02-2.4-1.13-.32-.11-.55-.26-.78.26-.23.53-.9 1.13-1.1 1.36-.2.23-.4.26-.93 0-1.52-.76-2.52-1.42-3.31-2.93-.29-.55.29-.5.82-.77.26-.13.53-.61.69-1.02.17-.41.08-.78-.03-.93-.11-.15-.53-1.26-.73-1.72-.2-.46-.4-.38-.55-.39-.15-.01-.32-.01-.49-.01-.17 0-.46.06-.7.28-.24.22-.93.91-.93 2.22s.95 2.57 1.08 2.75c.13.18 1.86 2.84 4.51 3.98.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.08 2.08-.85 2.38-1.67.3-.82.3-1.52.21-1.67-.09-.15-.32-.23-.85-.49z" />
         <path d="M16 3C9.93 3 5 7.7 5 13.47c0 2.3.76 4.43 2.06 6.12L6.5 28l8.82-1.56c.2.06.4.1.68.16C22.06 25.08 27 20.38 27 14.7 27 7.7 21.07 3 16 3zm0 22.1c-.46 0-.9-.05-1.33-.16l-.52-.14-4.99.88 1.01-4.63-.34-.48a9.87 9.87 0 0 1-1.86-5.79C8.97 9 12.17 5.95 16 5.95c3.83 0 7.03 3.05 7.03 7.22S19.83 25.1 16 25.1z" />
       </svg>
+=======
+function WhatsAppButton() {
+  const phone = "2349159651347";
+  const message = encodeURIComponent(
+    "Hello Crown Palm Oil! I'm interested in your red palm oil and would like more information."
+  );
+  return (
+    <a
+      href={`https://wa.me/${phone}?text=${message}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with us on WhatsApp"
+      className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3.5 font-medium text-white shadow-elevated transition hover:scale-105 hover:bg-[#1ebe5d]"
+    >
+      <MessageCircle className="h-5 w-5 fill-white" />
+      <span className="hidden sm:inline">Chat on WhatsApp</span>
+>>>>>>> d702e2755741900e578020e5d1f3859f5c3a81d3
     </a>
   );
 }
