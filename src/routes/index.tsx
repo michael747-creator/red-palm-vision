@@ -21,41 +21,11 @@ function Index() {
       <Reviews />
       <Contact />
       <Footer />
-<<<<<<< HEAD
-      <WhatsAppFloating />
-=======
       <WhatsAppButton />
->>>>>>> d702e2755741900e578020e5d1f3859f5c3a81d3
     </div>
   );
 }
 
-<<<<<<< HEAD
-function WhatsAppFloating() {
-  const phoneE164 = "09159651347";
-  const message = encodeURIComponent("Hi Crowns Palm Oil, I would like to order red palm oil.");
-  const href = `https://wa.me/${phoneE164}?text=${message}`;
-
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      aria-label="Chat on WhatsApp"
-      title="Make orders via WhatsApp"
-      className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_10px_25px_rgba(0,0,0,0.25)] transition hover:opacity-90 sm:bottom-6 sm:right-6 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#25D366] hover:scale-105 animate-bounce"
-    >
-      <svg
-        viewBox="0 0 32 32"
-        role="img"
-        aria-hidden="true"
-        fill="currentColor"
-        className="h-7 w-7 sm:h-7 sm:w-7"
-      >
-        <path d="M19.02 18.29c-.53-.26-2.08-1.02-2.4-1.13-.32-.11-.55-.26-.78.26-.23.53-.9 1.13-1.1 1.36-.2.23-.4.26-.93 0-1.52-.76-2.52-1.42-3.31-2.93-.29-.55.29-.5.82-.77.26-.13.53-.61.69-1.02.17-.41.08-.78-.03-.93-.11-.15-.53-1.26-.73-1.72-.2-.46-.4-.38-.55-.39-.15-.01-.32-.01-.49-.01-.17 0-.46.06-.7.28-.24.22-.93.91-.93 2.22s.95 2.57 1.08 2.75c.13.18 1.86 2.84 4.51 3.98.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.08 2.08-.85 2.38-1.67.3-.82.3-1.52.21-1.67-.09-.15-.32-.23-.85-.49z" />
-        <path d="M16 3C9.93 3 5 7.7 5 13.47c0 2.3.76 4.43 2.06 6.12L6.5 28l8.82-1.56c.2.06.4.1.68.16C22.06 25.08 27 20.38 27 14.7 27 7.7 21.07 3 16 3zm0 22.1c-.46 0-.9-.05-1.33-.16l-.52-.14-4.99.88 1.01-4.63-.34-.48a9.87 9.87 0 0 1-1.86-5.79C8.97 9 12.17 5.95 16 5.95c3.83 0 7.03 3.05 7.03 7.22S19.83 25.1 16 25.1z" />
-      </svg>
-=======
 function WhatsAppButton() {
   const phone = "2349159651347";
   const message = encodeURIComponent(
@@ -71,7 +41,6 @@ function WhatsAppButton() {
     >
       <MessageCircle className="h-5 w-5 fill-white" />
       <span className="hidden sm:inline">Chat on WhatsApp</span>
->>>>>>> d702e2755741900e578020e5d1f3859f5c3a81d3
     </a>
   );
 }
@@ -144,7 +113,6 @@ function Hero() {
               <Phone className="h-4 w-4" /> Order by phone
             </a>
           </div>
-
           <div className="mt-16 flex items-center gap-6 text-sm">
             <div className="flex items-center gap-1.5">
               {[...Array(5)].map((_, i) => (
@@ -253,7 +221,6 @@ function Products() {
             Whether you need a single bottle for the family table or industrial volume — we deliver.
           </p>
         </div>
-
         <div className="grid gap-6 md:grid-cols-3">
           <div className="group relative overflow-hidden rounded-2xl md:col-span-1 md:row-span-2">
             <img
@@ -290,123 +257,3 @@ function Products() {
     </section>
   );
 }
-
-function Process() {
-  const steps = [
-    { n: "01", t: "Harvest", d: "Ripe fruit bunches picked by hand at peak color." },
-    { n: "02", t: "Mill", d: "Steamed and pressed within 24 hours to lock in nutrients." },
-    { n: "03", t: "Filter", d: "Naturally settled and filtered — never chemically refined." },
-    { n: "04", t: "Bottle", d: "Sealed at source for unmatched freshness and flavor." },
-  ];
-  return (
-    <section id="process" className="py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-16 max-w-2xl">
-          <span className="text-xs font-medium uppercase tracking-widest text-accent">Our process</span>
-          <h2 className="mt-4 font-serif text-4xl font-bold leading-tight md:text-5xl">
-            Four steps. Zero shortcuts.
-          </h2>
-        </div>
-        <div className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-4">
-          {steps.map((s) => (
-            <div key={s.n} className="bg-background p-8">
-              <div className="font-serif text-5xl font-bold text-gold-gradient">{s.n}</div>
-              <h3 className="mt-6 font-serif text-xl font-bold">{s.t}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Reviews() {
-  return (
-    <section className="bg-card/40 py-32">
-      <div className="mx-auto max-w-3xl px-6 text-center">
-        <div className="mb-6 inline-flex items-center gap-1.5">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} className="h-6 w-6 fill-accent text-accent" />
-          ))}
-        </div>
-        <blockquote className="font-serif text-3xl font-medium leading-tight md:text-4xl">
-          "Truly the finest red palm oil — rich, fragrant, and unmistakably pure.
-          Crown Palm Oil sets the standard."
-        </blockquote>
-        <div className="mt-8 text-sm uppercase tracking-widest text-muted-foreground">
-          Verified Google Review · 5.0
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Contact() {
-  return (
-    <section id="contact" className="py-32">
-      <div className="mx-auto max-w-5xl px-6">
-        <div className="overflow-hidden rounded-3xl border border-border bg-card p-10 shadow-elevated md:p-16">
-          <div className="grid gap-12 md:grid-cols-2">
-            <div>
-              <span className="text-xs font-medium uppercase tracking-widest text-accent">Get in touch</span>
-              <h2 className="mt-4 font-serif text-4xl font-bold leading-tight md:text-5xl">
-                Place an order or request a quote.
-              </h2>
-              <p className="mt-6 text-muted-foreground">
-                Whether you're a household, retailer, restaurant, or processor — we're ready
-                to supply you with premium red palm oil at scale.
-              </p>
-            </div>
-            <div className="space-y-6">
-              <ContactRow icon={Phone} title="Call us" value="0915 965 1347" href="tel:09159651347" />
-              <ContactRow icon={Clock} title="Hours" value="Open today · Closes 6 pm" />
-              <ContactRow icon={MapPin} title="Visit" value="Crown Palm Oil LTD" />
-              <a
-                href="tel:09159651347"
-                className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold-gradient px-7 py-4 font-medium text-primary-foreground shadow-glow transition hover:opacity-90"
-              >
-                <Phone className="h-4 w-4" /> Call now
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ContactRow({
-  icon: Icon,
-  title,
-  value,
-  href,
-}: { icon: typeof Phone; title: string; value: string; href?: string }) {
-  const content = (
-    <div className="flex items-start gap-4">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-background">
-        <Icon className="h-4 w-4 text-accent" />
-      </div>
-      <div>
-        <div className="text-xs uppercase tracking-widest text-muted-foreground">{title}</div>
-        <div className="mt-1 font-medium">{value}</div>
-      </div>
-    </div>
-  );
-  return href ? <a href={href} className="block transition hover:opacity-80">{content}</a> : content;
-}
-
-function Footer() {
-  return (
-    <footer className="border-t border-border py-10">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
-        <div className="flex items-center gap-2">
-          <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gold-gradient text-xs font-bold text-primary-foreground">C</div>
-          <span>© {new Date().getFullYear()} Crown Palm Oil LTD</span>
-        </div>
-        <div>Food manufacturer · Naturally crafted</div>
-      </div>
-    </footer>
-  );
-}
-
