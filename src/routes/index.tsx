@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Phone, Clock, Star, MapPin, Leaf, Award, Truck, ShieldCheck, ArrowRight, MessageCircle } from "lucide-react";
 import heroPalm from "@/assets/hero-palm.jpg";
 import productPour from "@/assets/product-pour.jpg";
-import plantation from "@/assets/plantation.jpg";
 import headerLogo from "@/assets/photo_2026-05-18_17-21-58.jpg";
 
 export const Route = createFileRoute("/")({
@@ -125,13 +124,6 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-10 right-10">
-        <img
-          src="/photo_2026-05-18_17-22-11.jpg"
-          alt="Additional palm oil product"
-          className="h-32 w-32 rounded-full object-cover shadow-lg"
-        />
-      </div>
     </section>
   );
 }
@@ -161,15 +153,17 @@ function About() {
   return (
     <section id="about" className="relative py-32">
       <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-2 md:items-center">
-        <div>
-          <img
-            src={plantation}
-            alt="Crown Palm Oil plantation at sunset"
-            width={1600}
-            height={1000}
-            loading="lazy"
-            className="rounded-2xl shadow-elevated"
-          />
+        <div className="relative flex justify-center">
+          <div className="relative max-w-md overflow-hidden rounded-2xl border border-border bg-card p-4 shadow-elevated w-full">
+            <img
+              src="/photo_2026-05-18_17-22-11.jpg"
+              alt="Crowns Premium Red Palm Oil Bottle"
+              width={800}
+              height={1000}
+              loading="lazy"
+              className="max-h-[500px] w-full rounded-xl object-cover"
+            />
+          </div>
         </div>
         <div>
           <span className="text-xs font-medium uppercase tracking-widest text-accent">About us</span>
