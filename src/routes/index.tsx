@@ -257,3 +257,128 @@ function Products() {
     </section>
   );
 }
+
+function Process() {
+  const steps = [
+    { n: "01", t: "Harvest", d: "Ripe fruit bunches picked by hand at peak color." },
+    { n: "02", t: "Mill", d: "Steamed and pressed within 24 hours to lock in nutrients." },
+    { n: "03", t: "Filter", d: "Naturally settled and filtered — never chemically refined." },
+    { n: "04", t: "Bottle", d: "Sealed at source for unmatched freshness and flavor." },
+  ];
+  return (
+    <section id="process" className="py-32">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-16 max-w-2xl">
+          <span className="text-xs font-medium uppercase tracking-widest text-accent">Our process</span>
+          <h2 className="mt-4 font-serif text-4xl font-bold leading-tight md:text-5xl">
+            Four steps. Zero shortcuts.
+          </h2>
+        </div>
+        <div className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-4">
+          {steps.map((s) => (
+            <div key={s.n} className="bg-background p-8">
+              <div className="font-serif text-5xl font-bold text-gold-gradient">{s.n}</div>
+              <h3 className="mt-6 font-serif text-xl font-bold">{s.t}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Reviews() {
+  return (
+    <section className="bg-card/40 py-32">
+      <div className="mx-auto max-w-3xl px-6 text-center">
+        <div className="mb-6 inline-flex items-center gap-1.5">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className="h-6 w-6 fill-accent text-accent" />
+          ))}
+        </div>
+        <blockquote className="font-serif text-3xl font-medium leading-tight md:text-4xl">
+          "Truly the finest red palm oil — rich, fragrant, and unmistakably pure.
+          Crown Palm Oil sets the standard."
+        </blockquote>
+        <div className="mt-8 text-sm uppercase tracking-widest text-muted-foreground">
+          Verified Google Review · 5.0
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Contact() {
+  return (
+    <section id="contact" className="py-32">
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="overflow-hidden rounded-3xl border border-border bg-card p-10 shadow-elevated md:p-16">
+          <div className="grid gap-12 md:grid-cols-2">
+            <div>
+              <span className="text-xs font-medium uppercase tracking-widest text-accent">Get in touch</span>
+              <h2 className="mt-4 font-serif text-4xl font-bold leading-tight md:text-5xl">
+                Place an order or request a quote.
+              </h2>
+              <p className="mt-6 text-muted-foreground">
+                Whether you're a household, retailer, restaurant, or processor — we're ready
+                to supply you with premium red palm oil at scale.
+              </p>
+            </div>
+            <div className="space-y-6">
+              <ContactRow icon={Phone} title="Call us" value="0915 965 1347" href="tel:09159651347" />
+              <ContactRow icon={Clock} title="Hours" value="Open today · Closes 6 pm" />
+              <ContactRow icon={MapPin} title="Visit" value="Crown Palm Oil LTD" />
+              <a
+                href="tel:09159651347"
+                className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold-gradient px-7 py-4 font-medium text-primary-foreground shadow-glow transition hover:opacity-90"
+              >
+                <Phone className="h-4 w-4" /> Call now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ContactRow({
+  icon: Icon,
+  title,
+  value,
+  href,
+}: {
+  icon: typeof Phone;
+  title: string;
+  value: string;
+  href?: string;
+}) {
+  const content = (
+    <div className="flex items-start gap-4">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-background">
+        <Icon className="h-4 w-4 text-accent" />
+      </div>
+      <div>
+        <div className="text-xs uppercase tracking-widest text-muted-foreground">{title}</div>
+        <div className="mt-1 font-medium">{value}</div>
+      </div>
+    </div>
+  );
+  return href ? <a href={href} className="block transition hover:opacity-80">{content}</a> : content;
+}
+
+function Footer() {
+  return (
+    <footer className="border-t border-border py-10">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
+        <div className="flex items-center gap-2">
+          <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gold-gradient text-xs font-bold text-primary-foreground">C</div>
+          <span>© {new Date().getFullYear()} Crown Palm Oil LTD</span>
+        </div>
+        <div>Food manufacturer · Naturally crafted</div>
+      </div>
+    </footer>
+  );
+}
+
