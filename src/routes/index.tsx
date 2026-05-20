@@ -36,7 +36,7 @@ function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
-      className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3.5 font-medium text-white shadow-elevated transition hover:scale-105 hover:bg-[#1ebe5d]"
+      className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3.5 font-medium text-white shadow-elevated transition hover:scale-105 hover:bg-[#1ebe5d] animate-gentle-bounce"
     >
       <MessageCircle className="h-5 w-5 fill-white" />
       <span className="hidden sm:inline">Chat on WhatsApp</span>

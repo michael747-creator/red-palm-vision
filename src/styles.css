@@ -187,4 +187,16 @@
     pointer-events: none;
     mix-blend-mode: overlay;
   }
+  @keyframes gentle-bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  .animate-gentle-bounce {
+    animation: gentle-bounce 2.5s infinite ease-in-out;
+  }
 }
+
