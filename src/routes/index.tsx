@@ -321,7 +321,7 @@ function Contact() {
             </div>
             <div className="space-y-6">
               <ContactRow icon={Phone} title="Call us" value="0915 965 1347" href="tel:09159651347" />
-              <ContactRow icon={Clock} title="Hours" value="Open today · Closes 6 pm" />
+              <ContactRow icon={Clock} title="Hours" value="Open 24/7" />
               <ContactRow icon={MapPin} title="Visit" value="Crown Palm Oil LTD" />
               <a
                 href="tel:09159651347"
