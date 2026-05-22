@@ -88,18 +88,18 @@ function Hero() {
       </div>
       <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 pt-32 pb-20">
         <div className="max-w-2xl">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-accent backdrop-blur">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-accent backdrop-blur animate-on-scroll">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Premium Food Manufacturer
           </div>
-          <h1 className="font-serif text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl lg:text-8xl">
+          <h1 className="font-serif text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl lg:text-8xl animate-on-scroll">
             Liquid <span className="text-gold-gradient">Gold</span><br />
             from the <span className="italic">Crown</span>.
           </h1>
-          <p className="mt-8 max-w-lg text-lg text-muted-foreground md:text-xl">
+          <p className="mt-8 max-w-lg text-lg text-muted-foreground md:text-xl animate-on-scroll">
             Naturally-pressed, unrefined red palm oil — milled from ripe fruit at the source.
             Rich. Aromatic. Honest.
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <div className="mt-10 flex flex-wrap items-center gap-4 animate-on-scroll">
             <a
               href="#products"
               className="group inline-flex items-center gap-2 rounded-full bg-gold-gradient px-7 py-3.5 font-medium text-primary-foreground shadow-glow transition hover:opacity-90"
@@ -114,7 +114,7 @@ function Hero() {
               <Phone className="h-4 w-4" /> Order by phone
             </a>
           </div>
-          <div className="mt-16 flex items-center gap-6 text-sm">
+          <div className="mt-16 flex items-center gap-6 text-sm animate-on-scroll">
             <div className="flex items-center gap-1.5">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-4 w-4 fill-accent text-accent" />
@@ -138,7 +138,7 @@ function Trust() {
     { icon: Truck, label: "Bulk Supply" },
   ];
   return (
-    <section className="border-y border-border bg-card/30 py-8">
+    <section className="border-y border-border bg-card/30 py-8 animate-on-scroll">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-6 md:grid-cols-4">
         {items.map(({ icon: Icon, label }) => (
           <div key={label} className="flex items-center gap-3 text-muted-foreground">
@@ -163,21 +163,21 @@ function About() {
               width={800}
               height={1000}
               loading="lazy"
-              className="max-h-[500px] w-full rounded-xl object-cover"
+              className="max-h-[500px] w-full rounded-xl object-cover zoom-on-scroll"
             />
           </div>
         </div>
         <div>
-          <span className="text-xs font-medium uppercase tracking-widest text-accent">About us</span>
-          <h2 className="mt-4 font-serif text-4xl font-bold leading-tight md:text-5xl">
+          <span className="text-xs font-medium uppercase tracking-widest text-accent animate-on-scroll">About us</span>
+          <h2 className="mt-4 font-serif text-4xl font-bold leading-tight md:text-5xl animate-on-scroll">
             From our groves to your kitchen — nothing in between.
           </h2>
-          <p className="mt-6 text-lg text-muted-foreground">
+          <p className="mt-6 text-lg text-muted-foreground animate-on-scroll">
             Crowns Palm Oil LTD has been crafting some of the finest red palm oil in the region.
             We work directly with smallholder farmers, mill our fruit within hours of harvest,
             and bottle without additives or chemical refining.
           </p>
-          <div className="mt-10 grid grid-cols-3 gap-6">
+          <div className="mt-10 grid grid-cols-3 gap-6 animate-on-scroll">
             <Stat value="100%" label="Pure & natural" />
             <Stat value="5.0★" label="Customer rating" />
             <Stat value="24h" label="Farm to bottle" />
@@ -204,16 +204,16 @@ function Products() {
     { name: "Bulk Industrial", desc: "Wholesale supply for restaurants and processors.", size: "200L drums" },
   ];
   return (
-    <section id="products" className="relative bg-card/40 py-32">
+    <section id="products" className="relative bg-card/40 py-32 animate-on-scroll">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <span className="text-xs font-medium uppercase tracking-widest text-accent">Our products</span>
-            <h2 className="mt-4 max-w-xl font-serif text-4xl font-bold leading-tight md:text-5xl">
+            <span className="text-xs font-medium uppercase tracking-widest text-accent animate-on-scroll">Our products</span>
+            <h2 className="mt-4 max-w-xl font-serif text-4xl font-bold leading-tight md:text-5xl animate-on-scroll">
               Three grades. One uncompromising standard.
             </h2>
           </div>
-          <p className="max-w-sm text-muted-foreground">
+          <p className="max-w-sm text-muted-foreground animate-on-scroll">
             Whether you need a single bottle for the family table or industrial volume — we deliver.
           </p>
         </div>
@@ -229,20 +229,20 @@ function Products() {
             />
             <div className="absolute inset-0 bg-fade-gradient" />
             <div className="absolute bottom-0 left-0 right-0 p-8">
-              <div className="text-xs uppercase tracking-widest text-accent">Featured</div>
-              <div className="mt-2 font-serif text-2xl font-bold">The Crown Pour</div>
+              <div className="text-xs uppercase tracking-widest text-accent animate-on-scroll">Featured</div>
+              <div className="mt-2 font-serif text-2xl font-bold animate-on-scroll">The Crown Pour</div>
             </div>
           </div>
           {products.map((p) => (
             <div
               key={p.name}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition hover:border-accent/50 hover:shadow-glow md:col-span-2 md:row-span-1 md:p-10"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition hover:border-accent/50 hover:shadow-glow md:col-span-2 md:row-span-1 md:p-10 animate-on-scroll"
             >
               <div className="flex items-start justify-between gap-6">
                 <div>
-                  <h3 className="font-serif text-2xl font-bold md:text-3xl">{p.name}</h3>
-                  <p className="mt-3 text-muted-foreground">{p.desc}</p>
-                  <div className="mt-4 text-sm text-accent">{p.size}</div>
+                  <h3 className="font-serif text-2xl font-bold md:text-3xl animate-on-scroll">{p.name}</h3>
+                  <p className="mt-3 text-muted-foreground animate-on-scroll">{p.desc}</p>
+                  <div className="mt-4 text-sm text-accent animate-on-scroll">{p.size}</div>
                 </div>
                 <ArrowRight className="h-5 w-5 shrink-0 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-accent" />
               </div>
@@ -262,20 +262,20 @@ function Process() {
     { n: "04", t: "Bottle", d: "Sealed at source for unmatched freshness and flavor." },
   ];
   return (
-    <section id="process" className="py-32">
+    <section id="process" className="py-32 animate-on-scroll">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-16 max-w-2xl">
-          <span className="text-xs font-medium uppercase tracking-widest text-accent">Our process</span>
-          <h2 className="mt-4 font-serif text-4xl font-bold leading-tight md:text-5xl">
+          <span className="text-xs font-medium uppercase tracking-widest text-accent animate-on-scroll">Our process</span>
+          <h2 className="mt-4 font-serif text-4xl font-bold leading-tight md:text-5xl animate-on-scroll">
             Four steps. Zero shortcuts.
           </h2>
         </div>
         <div className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-4">
           {steps.map((s) => (
-            <div key={s.n} className="bg-background p-8">
-              <div className="font-serif text-5xl font-bold text-gold-gradient">{s.n}</div>
-              <h3 className="mt-6 font-serif text-xl font-bold">{s.t}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
+            <div key={s.n} className="bg-background p-8 animate-on-scroll">
+              <div className="font-serif text-5xl font-bold text-gold-gradient animate-on-scroll">{s.n}</div>
+              <h3 className="mt-6 font-serif text-xl font-bold animate-on-scroll">{s.t}</h3>
+              <p className="mt-2 text-sm text-muted-foreground animate-on-scroll">{s.d}</p>
             </div>
           ))}
         </div>
@@ -286,18 +286,18 @@ function Process() {
 
 function Reviews() {
   return (
-    <section className="bg-card/40 py-32">
+    <section className="bg-card/40 py-32 animate-on-scroll">
       <div className="mx-auto max-w-3xl px-6 text-center">
-        <div className="mb-6 inline-flex items-center gap-1.5">
+        <div className="mb-6 inline-flex items-center gap-1.5 animate-on-scroll">
           {[...Array(5)].map((_, i) => (
             <Star key={i} className="h-6 w-6 fill-accent text-accent" />
           ))}
         </div>
-        <blockquote className="font-serif text-3xl font-medium leading-tight md:text-4xl">
+        <blockquote className="font-serif text-3xl font-medium leading-tight md:text-4xl animate-on-scroll">
           "Truly the finest red palm oil — rich, fragrant, and unmistakably pure.
           Crown Palm Oil sets the standard."
         </blockquote>
-        <div className="mt-8 text-sm uppercase tracking-widest text-muted-foreground">
+        <div className="mt-8 text-sm uppercase tracking-widest text-muted-foreground animate-on-scroll">
           Verified Google Review · 5.0
         </div>
       </div>
@@ -307,16 +307,16 @@ function Reviews() {
 
 function Contact() {
   return (
-    <section id="contact" className="py-32">
+    <section id="contact" className="py-32 animate-on-scroll">
       <div className="mx-auto max-w-5xl px-6">
         <div className="overflow-hidden rounded-3xl border border-border bg-card p-10 shadow-elevated md:p-16">
           <div className="grid gap-12 md:grid-cols-2">
             <div>
-              <span className="text-xs font-medium uppercase tracking-widest text-accent">Get in touch</span>
-              <h2 className="mt-4 font-serif text-4xl font-bold leading-tight md:text-5xl">
+              <span className="text-xs font-medium uppercase tracking-widest text-accent animate-on-scroll">Get in touch</span>
+              <h2 className="mt-4 font-serif text-4xl font-bold leading-tight md:text-5xl animate-on-scroll">
                 Place an order or request a quote.
               </h2>
-              <p className="mt-6 text-muted-foreground">
+              <p className="mt-6 text-muted-foreground animate-on-scroll">
                 Whether you're a household, retailer, restaurant, or processor — we're ready
                 to supply you with premium red palm oil at scale.
               </p>
@@ -327,7 +327,7 @@ function Contact() {
               <ContactRow icon={MapPin} title="Visit" value="Crown Palm Oil LTD" />
               <a
                 href="tel:09159651347"
-                className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold-gradient px-7 py-4 font-medium text-primary-foreground shadow-glow transition hover:opacity-90"
+                className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold-gradient px-7 py-4 font-medium text-primary-foreground shadow-glow transition hover:opacity-90 animate-on-scroll"
               >
                 <Phone className="h-4 w-4" /> Call now
               </a>
@@ -366,7 +366,7 @@ function ContactRow({
 
 function Footer() {
   return (
-    <footer className="border-t border-border py-10">
+    <footer className="border-t border-border py-10 animate-on-scroll">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
         <div className="flex items-center gap-2">
           <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gold-gradient text-xs font-bold text-primary-foreground">C</div>

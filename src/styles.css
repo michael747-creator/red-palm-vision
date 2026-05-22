@@ -255,4 +255,44 @@
       max-height: 600px;
     }
   }
+
+  /* Fade-In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  /* Zoom-In Animation */
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .zoom-in {
+    animation: zoomIn 1s ease-out forwards;
+  }
+
+  /* Initial state for elements to animate */
+  .animate-on-scroll,
+  .zoom-on-scroll {
+    opacity: 0;
+  }
 }

@@ -106,6 +106,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
       <body>
         {children}
         <Scripts />
+        <script src="/src/utils/animateOnScroll.ts" type="module" />
       </body>
     </html>
   );
@@ -120,3 +121,4 @@ function RootComponent() {
     </QueryClientProvider>
   );
 }
+
