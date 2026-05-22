@@ -76,14 +76,16 @@ function Header() {
 function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-hero-gradient grain">
-      <img
-        src={heroPalm}
-        alt="Fresh red palm oil fruits"
-        width={1600}
-        height={1200}
-        className="absolute right-0 top-0 h-full w-full object-cover opacity-60 mix-blend-luminosity md:w-3/5 md:opacity-90 md:mix-blend-normal"
-        style={{ maskImage: "linear-gradient(to right, transparent, black 40%)" }}
-      />
+      <div className="responsive-image-container">
+        <img
+          src={heroPalm}
+          alt="Fresh red palm oil fruits"
+          width={1600}
+          height={1200}
+          className="responsive-image"
+          style={{ maskImage: "linear-gradient(to right, transparent, black 40%)" }}
+        />
+      </div>
       <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 pt-32 pb-20">
         <div className="max-w-2xl">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-accent backdrop-blur">
@@ -375,5 +377,4 @@ function Footer() {
     </footer>
   );
 }
-
 

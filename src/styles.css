@@ -158,45 +158,101 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: 'Playfair Display', Georgia, serif;
     letter-spacing: -0.02em;
   }
 }
 
 @layer utilities {
-  .bg-hero-gradient { background: var(--gradient-hero); }
-  .bg-gold-gradient { background: var(--gradient-gold); }
-  .bg-fade-gradient { background: var(--gradient-fade); }
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gold-gradient {
+    background: var(--gradient-gold);
+  }
+
+  .bg-fade-gradient {
+    background: var(--gradient-fade);
+  }
+
   .text-gold-gradient {
     background: var(--gradient-gold);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
-  .shadow-glow { box-shadow: var(--shadow-glow); }
-  .shadow-elevated { box-shadow: var(--shadow-elevated); }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
   .grain {
     position: relative;
   }
+
   .grain::after {
     content: '';
-    position: absolute; inset: 0;
+    position: absolute;
+    inset: 0;
     background-image: radial-gradient(oklch(1 0 0 / 4%) 1px, transparent 1px);
     background-size: 3px 3px;
     pointer-events: none;
     mix-blend-mode: overlay;
   }
+
   @keyframes gentle-bounce {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-8px);
     }
   }
+
   .animate-gentle-bounce {
     animation: gentle-bounce 2.5s infinite ease-in-out;
   }
-}
 
+  /* Responsive Image Container */
+  .responsive-image-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Responsive Image */
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    filter: brightness(1) contrast(1) saturate(1);
+  }
+
+  /* Media Queries for Responsive Adjustments */
+  @media (max-width: 768px) {
+    .responsive-image {
+      max-height: 300px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .responsive-image {
+      max-height: 600px;
+    }
+  }
+}
