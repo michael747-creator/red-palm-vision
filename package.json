@@ -1,9 +1,4 @@
 {
-<<<<<<< HEAD
-  "dependencies": {
-    "git": "^0.1.5",
-    "start": "^5.1.0"
-=======
   "name": "tanstack_start_ts",
   "private": true,
   "sideEffects": false,
@@ -89,6 +84,5 @@
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
     "vite": "^7.3.1"
->>>>>>> d57b5d06ebacab62aa7ab447339891f1b0a9316f
   }
 }
